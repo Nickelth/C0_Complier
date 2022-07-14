@@ -1,0 +1,24 @@
+int base,power,ans;
+int quick_pow()
+{
+    int res;
+    res=1;
+    while(power)
+    {
+        if(power-power/2*2)
+        {
+                res=res*base;
+        }
+        power=power/2;
+        base=base*base;
+    }
+    return res;
+
+}
+void main()
+{
+    scanf(base);
+    scanf(power);
+    ans=quick_pow();
+    printf(ans);
+}
